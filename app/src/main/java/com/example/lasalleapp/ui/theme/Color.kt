@@ -17,3 +17,5 @@ val GrayDark = Color(0xFF4B4B4B)
 val GrayLight = Color(0xFFEBEBEB)
 val BlueLight = Color(0xFF338FE9)
 val LightLightGray = Color(0xFFE6E6E6)
+val Correct = Color(0xFFE6E6E6)
+
