@@ -1,5 +1,8 @@
 package com.example.lasalleapp.ui.models
 
-class News {
-
-}
+data class News (
+    val id : Int,
+    val title: String,
+    val description: String,
+    val image: String
+)

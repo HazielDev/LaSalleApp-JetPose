@@ -16,9 +16,13 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = BlueDark,
+    secondary = Red,
+    onPrimary = White,
+    onSecondary = White,
+    background = GrayLight,
+    onBackground = GrayDark,
+    onTertiary = LightLightGray
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -27,7 +31,8 @@ private val LightColorScheme = lightColorScheme(
     onPrimary = White,
     onSecondary = White,
     background = GrayLight,
-    onBackground = GrayDark
+    onBackground = GrayDark,
+    onTertiary = LightLightGray
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -48,11 +53,6 @@ fun LaSalleAppTheme(
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
-
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
